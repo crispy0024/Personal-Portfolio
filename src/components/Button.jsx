@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 const themeClassMap = {
-  default: 'border-purple-700 bg-purple-700 text-white hover:bg-purple-500 hover:border-purple-500',
-  outline: 'border-purple-700 bg-transparent text-purple-700 hover:text-purple-500 hover:border-purple-500',
+  default: 'border-gray-900 bg-gray-900 text-white hover:bg-gray-700 hover:border-gray-700',
+  outline: 'border-gray-900 bg-transparent text-gray-900 hover:bg-gray-900 hover:text-white hover:border-gray-900',
 };
 
 export const Button = (props) => {

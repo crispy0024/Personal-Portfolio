@@ -9,14 +9,14 @@ const themeClassMap = {
 
 export const Hero = (props) => {
   return (
-    <div className="px-6 py-16 bg-gray-100 sm:px-12 sm:py-24" data-sb-object-id={props.id}>
+    <div className="px-6 py-16 bg-white border border-gray-300 rounded-md sm:px-12 sm:py-24" data-sb-object-id={props.id}>
       <div className={`max-w-6xl mx-auto flex flex-col gap-12 md:items-center ${themeClassMap[props.theme] ?? themeClassMap['imgRight']}`}>
         <div className="flex-1 w-full max-w-xl mx-auto">
-          <h1 className="mb-6 text-4xl font-bold sm:text-5xl" data-sb-field-path="heading">
+          <h1 className="mb-6 text-4xl font-bold sm:text-5xl text-gray-800" data-sb-field-path="heading">
             {props.heading}
           </h1>
           {props.body && (
-            <Markdown options={{ forceBlock: true }} className="mb-6 text-lg" data-sb-field-path="body">
+            <Markdown options={{ forceBlock: true }} className="mb-6 text-lg text-gray-600" data-sb-field-path="body">
               {props.body}
             </Markdown>
           )}
