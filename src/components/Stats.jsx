@@ -1,6 +1,7 @@
 import Markdown from 'markdown-to-jsx';
 
 const themeClassMap = {
+  outline: 'bg-white border border-gray-300 text-gray-800',
   primary: 'bg-purple-700 text-white',
   dark: 'bg-gray-800 text-white',
 };
@@ -8,15 +9,15 @@ const themeClassMap = {
 export const Stats = (props) => {
   return (
     <div
-      className={`px-6 py-16 text-center ${themeClassMap[props.theme] ?? themeClassMap['primary']} sm:px-12 sm:py-24`}
+      className={`px-6 py-16 text-center rounded-md ${themeClassMap[props.theme] ?? themeClassMap['outline']} sm:px-12 sm:py-24`}
       data-sb-object-id={props.id}
     >
       <div className="mx-auto">
         <div className="mb-16">
-          <h2 className="mb-4 text-4xl font-bold sm:text-5xl" data-sb-field-path="heading">
+          <h2 className="mb-4 text-4xl font-bold sm:text-5xl text-gray-800" data-sb-field-path="heading">
             {props.heading}
           </h2>
-          {props.body && <Markdown options={{ forceBlock: true }} className="sm:text-lg" data-sb-field-path="body">
+          {props.body && <Markdown options={{ forceBlock: true }} className="sm:text-lg text-gray-600" data-sb-field-path="body">
             {props.body}
           </Markdown>}
         </div>
@@ -31,10 +32,10 @@ export const Stats = (props) => {
 const StatItem = (props) => {
   return (
     <div data-sb-object-id={props.id}>
-      <div className="mb-3 text-4xl font-bold sm:text-5xl" data-sb-field-path="value">
+      <div className="mb-3 text-4xl font-bold sm:text-5xl text-gray-800" data-sb-field-path="value">
         {props.value}
       </div>
-      <div data-sb-field-path="label">{props.label}</div>
+      <div className="text-gray-600" data-sb-field-path="label">{props.label}</div>
     </div>
   );
 };
