@@ -89,6 +89,10 @@ To deploy a cloud-based Netlify project your need to connected your repository t
 3. In the "Configure site and deploy" step you will see the "Visual editor" section. To make it work, you will need to install "Netlify Visual Editor GitHub App" in your GitHub account.
 4. Deploy your project
 
+### Configure Environment Variables on Netlify
+
+After the site is created, open your project in Netlify and add the same Contentful keys used locally in the **Environment variables** section (found under *Build & deploy* > *Environment*). Create variables for `CONTENTFUL_SPACE_ID`, `CONTENTFUL_MANAGEMENT_TOKEN`, `CONTENTFUL_DELIVERY_TOKEN`, and `CONTENTFUL_PREVIEW_TOKEN`. Without these values the deployed site cannot load content and will display a 404 page.
+
 ## Next Steps
 
 Here are a few suggestions on what to do next if you're new to Netlify visual editor:
